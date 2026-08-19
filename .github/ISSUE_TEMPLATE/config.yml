@@ -1,0 +1,9 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Hero Siege on Steam
+    url: https://store.steampowered.com/app/269210/Hero_Siege/
+    about: >
+      Bugs in the game, purchases, and account problems belong to Panic Art Studios, not here.
+  - name: Report a security issue privately
+    url: https://github.com/Jadeon/HeroBuilder-IssueTracker/security/advisories/new
+    about: Never open a public issue for a security problem. Use private reporting.

@@ -1,0 +1,106 @@
+name: Bug report
+description: The site crashes, renders wrong, or a control does not work.
+title: "[Bug] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        For a number that disagrees with the game, use the **Wrong number** form instead.
+        This form is for the site misbehaving.
+
+  - type: input
+    id: buildLink
+    attributes:
+      label: Build link
+      description: >
+        Open your build on herobuilder.io, press "Copy link" in the top bar, and paste it here.
+        The link contains the whole build, so this alone makes the bug reproducible.
+        If the bug is that the link itself will not open, paste it anyway.
+      placeholder: https://herobuilder.io/#...
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: What you expected to happen
+      placeholder: Clicking the ring slot should open the item picker.
+    validations:
+      required: true
+
+  - type: textarea
+    id: happened
+    attributes:
+      label: What actually happened
+      description: If there are steps to reach it, list them.
+      placeholder: Nothing opened. The page stayed as it was and the slot stayed empty.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: class
+    attributes:
+      label: Class
+      description: The class on screen when it happened.
+      options:
+        - Not class specific / not sure
+        - Amazon
+        - Bard
+        - Butcher
+        - Demon Slayer
+        - Demonspawn
+        - Exo
+        - Illusionist
+        - Jotunn
+        - Marauder
+        - Marksman
+        - Necromancer
+        - Nomad
+        - Paladin
+        - Pirate
+        - Plague Doctor
+        - Prophet
+        - Pyromancer
+        - Redneck
+        - Samurai
+        - Shaman
+        - Shield Lancer
+        - Stormweaver
+        - Viking
+        - White Mage
+    validations:
+      required: false
+
+  - type: dropdown
+    id: browser
+    attributes:
+      label: Browser
+      options:
+        - Chrome
+        - Edge
+        - Firefox
+        - Safari
+        - Other
+        - Not sure
+    validations:
+      required: false
+
+  - type: input
+    id: buildStamp
+    attributes:
+      label: Site build id
+      description: >
+        At the very bottom of the page, under the privacy links, there is a line reading
+        "build" and a short id. Copy it here. It tells us which version of the site you were on.
+      placeholder: build a1b2c3d
+    validations:
+      required: false
+
+  - type: textarea
+    id: screenshot
+    attributes:
+      label: Screenshot
+      description: Optional. Drag an image into this box to attach it.
+    validations:
+      required: false

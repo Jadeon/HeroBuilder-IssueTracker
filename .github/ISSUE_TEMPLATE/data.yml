@@ -1,0 +1,83 @@
+name: Wrong number
+description: The planner shows a value that does not match the game.
+title: "[Data] "
+labels: ["data"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        This is the most useful report you can file. The planner is only worth using if its
+        numbers match the client, and we cannot see your character.
+
+        **Attach the in-game tooltip screenshot.** The game client is the authority on every
+        number in this tool. Written sources disagree with each other constantly: the same item
+        is published with two different damage ranges on two different sites. A screenshot of the
+        tooltip is the one piece of evidence that settles which is right, and without it a report
+        turns into an argument between two sources that we cannot resolve.
+
+  - type: input
+    id: subject
+    attributes:
+      label: Which item, skill or node
+      description: The exact name as it appears in the game.
+      placeholder: Sunder, Heroic 1-Handed Mace / Whirlwind rank 12 / Incarnation node "Bloodlust"
+    validations:
+      required: true
+
+  - type: input
+    id: plannerValue
+    attributes:
+      label: What the planner shows
+      description: The value on herobuilder.io, copied exactly.
+      placeholder: 334 to 478 attack damage
+    validations:
+      required: true
+
+  - type: input
+    id: gameValue
+    attributes:
+      label: What the game shows
+      description: The value in the client, copied exactly from the tooltip.
+      placeholder: 341 to 488 attack damage
+    validations:
+      required: true
+
+  - type: textarea
+    id: tooltip
+    attributes:
+      label: Screenshot of the in-game tooltip
+      description: >
+        Drag the image into this box. Include the whole tooltip, not a crop of the one line.
+        The surrounding lines are often what explains the difference.
+    validations:
+      required: true
+
+  - type: input
+    id: buildLink
+    attributes:
+      label: Build link
+      description: >
+        Press "Copy link" on herobuilder.io with the same setup loaded. This lets us reproduce
+        your exact planner value rather than guessing at the rest of the build.
+      placeholder: https://herobuilder.io/#...
+    validations:
+      required: false
+
+  - type: input
+    id: buildStamp
+    attributes:
+      label: Site build id
+      description: The line at the bottom of the page reading "build" and a short id.
+      placeholder: build a1b2c3d
+    validations:
+      required: false
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: Anything else
+      description: >
+        Optional. Character level, difficulty, season, or anything else you think changed the
+        number.
+    validations:
+      required: false
