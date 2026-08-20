@@ -10,9 +10,10 @@ everyone about the hole before it is closed.
 **Use GitHub private vulnerability reporting.** On this repository, go to the **Security** tab and
 choose **Report a vulnerability**. The report is visible only to the maintainer until it is fixed.
 
-**Fallback.** If that is not available to you, email the address on the maintainer's GitHub
-profile with `SECURITY` in the subject line. Do not include exploit details in a first email you
-are unsure reached the right person. Say that you have a report and wait for a reply.
+**Fallback.** If private reporting is not available to you, open a normal issue saying only that
+you have a security report and asking for a private channel. Say nothing about the vulnerability
+itself: the issue is public, and the point of this page is that the details never are. You will be
+given somewhere private to send them.
 
 Expect a first response within seven days.
 
